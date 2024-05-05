@@ -35,7 +35,7 @@ public class ValidacoesListaTests
     }
 
     [Theory]
-    [InlineData(new int[] { 5, 8, 10 })]
+    [InlineData(new int[] { 5, 8 })]
     public void NaoDeveConterONumero10NaLista(int[] numeros)
     {
         // Arrange
@@ -46,7 +46,7 @@ public class ValidacoesListaTests
         var resultado = _validacoes.ListaContemDeterminadoNumero(lista, numeroParaProcurar);
 
         // Assert
-        Assert.True(resultado);
+        Assert.False(resultado);
     }
 
     [Theory]
